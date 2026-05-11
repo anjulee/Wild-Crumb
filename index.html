@@ -851,6 +851,158 @@
   .stagger-4 { transition-delay: 0.4s; }
 
   a { cursor: pointer; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+
+    /* Nav */
+    nav {
+      padding: 1rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .nav-links {
+      display: none;
+    }
+
+    /* Hero */
+    #hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      min-height: auto;
+      padding-top: 70px;
+    }
+    .hero-text {
+      padding: 3rem 1.5rem 2.5rem;
+      order: 2;
+    }
+    .hero-visual {
+      order: 1;
+      height: 55vw;
+      min-height: 260px;
+      max-height: 420px;
+    }
+    .hero-scroll-hint {
+      display: none !important;
+    }
+    .hero-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .btn-primary, .btn-ghost {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 1.5rem;
+    }
+
+    /* About */
+    #about {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .about-image-placeholder {
+      aspect-ratio: 4/3;
+    }
+    .about-image-caption {
+      bottom: -1rem;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+    .portfolio-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    /* Workshops */
+    .workshop-meta {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .workshop-meta span strong {
+      display: inline;
+    }
+    .workshops-grid {
+      grid-template-columns: 1fr !important;
+      max-width: 100% !important;
+    }
+
+    /* Blog */
+    .blog-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .blog-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    /* Shop */
+    .shop-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .shop-intro {
+      margin-bottom: 2rem;
+    }
+
+    /* Newsletter */
+    #newsletter {
+      padding: 3.5rem 1.5rem;
+    }
+    .newsletter-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .newsletter-form input {
+      border-right: 1px solid var(--border-med);
+      border-bottom: none;
+      border-radius: 2px 2px 0 0;
+    }
+    .newsletter-form button {
+      border-radius: 0 0 2px 2px;
+      padding: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 2.5rem 1.5rem;
+    }
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+    }
+
+    /* Date pills in workshop */
+    #learn > div[style] {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+    .shop-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-title {
+      font-size: 2.6rem;
+    }
+  }
+
 </style>
 </head>
 <body>
